@@ -41,4 +41,10 @@ jobs:
           ACCOUNTHTX: ${{ secrets.ACCOUNTHTX }}
           PASSWORDHTX: ${{ secrets.PASSWORDHTX }}
         run: |
-          python3 clock-in.py ${ACCOUNTHTX} ${PASSWORDHTX} ${EAI_SESS}          
+          python3 clock-in.py ${ACCOUNTHTX} ${PASSWORDHTX} ${EAI_SESS}         
+      - name: Clock In Xiaochuan
+        env:
+          ACCOUNTNXC: ${{ secrets.ACCOUNTNXC }}
+          PASSWORDNXC: ${{ secrets.PASSWORDNXC }}
+        run: |
+          python3 clock-in.py ${ACCOUNTNXC} ${PASSWORDNXC} ${EAI_SESS}             
